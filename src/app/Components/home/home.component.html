@@ -1,0 +1,27 @@
+<app-header (openDailog)="opendailog()"></app-header>
+<section>
+  <div class="video-container" *ngIf="videos">
+    <video autoplay muted class="video" (ended)="changebackground()">
+      <source src="{{ videos[0].link }}" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <div class="video-content">
+    <h1>The best place to visit</h1>
+    <div class="btn-container">
+      <button class="btn" (click)="opendailog()">View More</button>
+    </div>
+  </div>
+</section>
+<section class="hotels">
+  <div class="containers">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</section>
