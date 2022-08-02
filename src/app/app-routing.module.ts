@@ -6,6 +6,7 @@ import { RecomHotelsComponent } from './Components/recom-hotels/recom-hotels.com
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'rechotel', component: RecomHotelsComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({

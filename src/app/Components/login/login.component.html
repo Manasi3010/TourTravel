@@ -1,5 +1,90 @@
-<p>
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam eaque
-  possimus alias cumque tempore. Beatae porro at explicabo cum, saepe maxime
-  placeat eius, aperiam possimus autem, fugiat eaque praesentium! Fugiat.
-</p>
+<mat-tab-group>
+  <mat-tab label="Login">
+    <mat-icon class="icon">person</mat-icon>
+    <h5 style="text-align: center; font-size: 30px">
+      <u><i>Login</i></u>
+    </h5>
+    <div class="example-form">
+      <form class="form" [formGroup]="LogForm" (submit)="submit()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>User Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your name"
+            name="usename"
+            formControlName="username"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Enter your password"
+            value=""
+            name="password"
+            type="password"
+            formControlName="password"
+          />
+        </mat-form-field>
+        <mat-checkbox>Remember Me!</mat-checkbox>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </mat-tab>
+  <mat-tab label="Register">
+    <mat-icon class="icon">person</mat-icon>
+    <h5 style="text-align: center; font-size: 30px">
+      <u><i>Register</i></u>
+    </h5>
+    <div class="example-form">
+      <form class="form" [formGroup]="Register" (submit)="submitReg()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="Enter your email"
+            name=""
+            formControlName="email"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            placeholder="Enter your name"
+            name=""
+            formControlName="name"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Enter your password"
+            value=""
+            name="password"
+            type="password"
+            formControlName="password"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Confirm Password"
+            value=""
+            name="password"
+            type="password"
+            formControlName="confirmpass"
+          />
+        </mat-form-field>
+        <mat-checkbox>Remember Me!</mat-checkbox>
+        <button mat-raised-button color="primary" (click)="submitReg()">
+          Submit
+        </button>
+      </form>
+    </div>
+  </mat-tab>
+</mat-tab-group>

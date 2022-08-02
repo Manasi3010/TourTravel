@@ -10,7 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './Components/header/header.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RecomHotelsComponent } from './Components/recom-hotels/recom-hotels.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+
+import { NgImageSliderModule } from 'ng-image-slider';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    CarouselModule,
+    NgImageSliderModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

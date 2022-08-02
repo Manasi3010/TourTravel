@@ -1,5 +1,5 @@
-<app-header (openDailog)="opendailog()"></app-header>
-<section>
+<app-header (log)="opendailog()"></app-header>
+<section class="complete-video-container">
   <div class="video-container" *ngIf="videos">
     <video autoplay muted class="video" (ended)="changebackground()">
       <source src="{{ videos[0].link }}" type="video/mp4" />
@@ -9,19 +9,22 @@
   <div class="video-content">
     <h1>The best place to visit</h1>
     <div class="btn-container">
-      <button class="btn" (click)="opendailog()">View More</button>
+      <button class="btn">View More</button>
     </div>
   </div>
 </section>
-<section class="hotels">
-  <div class="containers">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-      <div class="col-md-2"></div>
-    </div>
-  </div>
+<app-recom-hotels></app-recom-hotels>
+<section>
+  <h2>Hotels</h2>
+  <mat-card>
+    <ng-image-slider
+      [images]="images"
+      #nav
+      [infinite]="true"
+      [autoSlide]="1"
+      [imageSize]="{ width: '25%', height: 200, space: 4 }"
+      slideImage="1"
+      [animationSpeed]="0.1"
+    ></ng-image-slider>
+  </mat-card>
 </section>
