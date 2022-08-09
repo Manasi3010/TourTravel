@@ -1,0 +1,563 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <mat-tab-group>
+        <mat-tab label="Hotel">
+          <div class="tab-containt">
+            <div class="tab-pane fade active show">
+              <div class="tab-inner">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                      <div class="form-group">
+                        <mat-label class="label">Your Destination</mat-label>
+                        <input
+                          matInput
+                          class="form-control form-control-custom"
+                          type="text"
+                          placeholder="Enter Your Destination or Hotel Name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Check In</mat-label>
+                            <div class="input-group group-form">
+                              <input
+                                type="text"
+                                placeholder="mm/dd/yy"
+                                class="form-control-1 form-control-custom"
+                                [matDatepicker]="picker"
+                              />
+                              <span class="input-group-append">
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Check Out</mat-label>
+                            <div class="input-group group-form">
+                              <input
+                                type="text"
+                                placeholder="mm/dd/yy"
+                                class="form-control-1 form-control-custom"
+                                [matDatepicker]="picker"
+                              />
+                              <span class="input-group-append">
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="row">
+                        <div class="col-4">
+                          <div class="form-group">
+                            <mat-label class="label">Rooms</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="01">01</mat-option>
+                                <mat-option value="02">02</mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-4">
+                          <div class="form-group">
+                            <mat-label class="label">Adults </mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="01">01</mat-option>
+                                <mat-option value="02">02</mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="form-group">
+                            <mat-label class="label">Kids</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="01">01</mat-option>
+                                <mat-option value="02">02</mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                      <mat-label class="submit"></mat-label>
+                      <button
+                        class="btn-first btn-submit full-width btn-height"
+                      >
+                        Search Now
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Flights">
+          <div class="tab-containt">
+            <div class="tab-pane fade active show">
+              <div class="tab-inner">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                      <div class="form-group">
+                        <mat-label class="label">Leaving From</mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          placeholder="city, distirct or specific airpot"
+                          class="form-control form-control-custom"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <mat-label class="label">Going To</mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          placeholder="city, distirct or specific airpot"
+                          class="form-control form-control-custom"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Departing On</mat-label>
+                            <div class="input-group group-form">
+                              <input
+                                type="text"
+                                placeholder="mm/dd/yy"
+                                class="form-control-1 form-control-custom"
+                                [matDatepicker]="picker"
+                              />
+                              <span class="input-group-append">
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label class="submit"></label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="AnyTime"
+                                  >AnyTime
+                                </mat-option>
+                                <mat-option value="Morning"
+                                  >Morning
+                                </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Arriving On</mat-label>
+                            <div class="input-group group-form">
+                              <input
+                                type="text"
+                                placeholder="mm/dd/yy"
+                                class="form-control-1 form-control-custom"
+                                [matDatepicker]="picker"
+                              />
+                              <span class="input-group-append">
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label class="submit"></label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="AnyTime"
+                                  >AnyTime
+                                </mat-option>
+                                <mat-option value="Morning"
+                                  >Morning
+                                </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="form-group">
+                            <mat-label class="label">Adults</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="1">1 </mat-option>
+                                <mat-option value="2">2 </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="form-group">
+                            <mat-label class="label">Kids</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="1">1 </mat-option>
+                                <mat-option value="2">2</mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Promocode</mat-label>
+                            <input
+                              matInput
+                              class="form-control form-control-custom"
+                              type="text"
+                              placeholder="type here"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Infants</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="1">1 </mat-option>
+                                <mat-option value="2">2 </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <mat-label class="label"></mat-label>
+                          <button
+                            class="btn-first btn-submit full-width btn-height"
+                          >
+                            Search Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab label="Cruise">
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="form-group">
+                  <mat-label class="label">Your Destination</mat-label>
+                  <input
+                    matInput
+                    class="form-control form-control-custom"
+                    type="text"
+                    placeholder="Enter Your Destination or Hotel Name"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <mat-label class="label">Departing Date</mat-label>
+                      <div class="input-group group-form">
+                        <input
+                          type="text"
+                          placeholder="mm/dd/yy"
+                          class="form-control-1 form-control-custom"
+                          [matDatepicker]="picker"
+                        />
+                        <span class="input-group-append">
+                          <mat-datepicker-toggle
+                            matSuffix
+                            [for]="picker"
+                          ></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <mat-label class="label">Cruise Length</mat-label>
+                      <div class="group-form">
+                        <mat-select
+                          class="custom-select form-control form-control-custom"
+                        >
+                          <mat-option value="1-2 Nights"
+                            >1-2 Nights
+                          </mat-option>
+                          <mat-option value="3-4 Nights"
+                            >3-4 Nights
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <mat-label class="label">Cruise Length</mat-label>
+                      <div class="group-form">
+                        <mat-select
+                          class="custom-select form-control form-control-custom"
+                        >
+                          <mat-option
+                            *ngFor="let cru of cruiseLine"
+                            [value]="cru"
+                            >{{ cru.name }}</mat-option
+                          >
+                        </mat-select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <mat-label class="submit"></mat-label>
+                    <button class="btn-first btn-submit full-width btn-height">
+                      Search Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </mat-tab>
+        <mat-tab label="Car"
+          ><div class="tab-containt">
+            <div class="tab-pane fade active show">
+              <div class="tab-inner">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                      <div class="form-group">
+                        <mat-label class="label">Pick Up</mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          placeholder="city, distirct or specific airpot"
+                          class="form-control form-control-custom"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <mat-label class="label">Drop Off</mat-label>
+                        <input
+                          matInput
+                          type="text"
+                          placeholder="city, distirct or specific airpot"
+                          class="form-control form-control-custom"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label"
+                              >Pick Up Date/Time</mat-label
+                            >
+                            <div class="input-group group-form">
+                              <input
+                                type="text"
+                                placeholder="mm/dd/yy"
+                                class="form-control-1 form-control-custom"
+                                [matDatepicker]="picker"
+                              />
+                              <span class="input-group-append">
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label class="submit"></label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="AnyTime"
+                                  >AnyTime
+                                </mat-option>
+                                <mat-option value="Morning"
+                                  >Morning
+                                </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label"
+                              >Drop Off Date/Time</mat-label
+                            >
+                            <div class="input-group group-form">
+                              <input
+                                type="text"
+                                placeholder="mm/dd/yy"
+                                class="form-control-1 form-control-custom"
+                                [matDatepicker]="picker"
+                              />
+                              <span class="input-group-append">
+                                <mat-datepicker-toggle
+                                  matSuffix
+                                  [for]="picker"
+                                ></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label class="submit"></label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="AnyTime"
+                                  >AnyTime
+                                </mat-option>
+                                <mat-option value="Morning"
+                                  >Morning
+                                </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="form-group">
+                            <mat-label class="label">Adults</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="1">1 </mat-option>
+                                <mat-option value="2">2 </mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="form-group">
+                            <mat-label class="label">Kids</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="1">1 </mat-option>
+                                <mat-option value="2">2</mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Promocode</mat-label>
+                            <input
+                              matInput
+                              class="form-control form-control-custom"
+                              type="text"
+                              placeholder="type here"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group">
+                            <mat-label class="label">Car Type</mat-label>
+                            <div class="group-form">
+                              <mat-select
+                                class="custom-select form-control form-control-custom"
+                              >
+                                <mat-option value="Economy"
+                                  >Economy
+                                </mat-option>
+                                <mat-option value="Compact">Compact</mat-option>
+                              </mat-select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <mat-label class="submit"></mat-label>
+                          <button
+                            class="btn-first btn-submit full-width btn-height"
+                          >
+                            Search Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div></mat-tab
+        >
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

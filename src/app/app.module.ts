@@ -9,10 +9,13 @@ import { MaterialModule } from './Shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './Components/header/header.component';
 import { LoginComponent } from './Components/login/login.component';
-import { RecomHotelsComponent } from './Components/recom-hotels/recom-hotels.component';
+import { SearchComponent } from './Components/search/recom-hotels.component';
 
 import { NgImageSliderModule } from 'ng-image-slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutusComponent } from './Components/aboutus/aboutus.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { HotelsComponent } from './Components/hotels/hotels.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     LoginComponent,
-    RecomHotelsComponent,
+    SearchComponent,
+    AboutusComponent,
+    FooterComponent,
+    HotelsComponent,
   ],
   imports: [
     BrowserModule,
