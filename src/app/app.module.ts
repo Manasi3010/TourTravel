@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutusComponent } from './Components/aboutus/aboutus.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HotelsComponent } from './Components/hotels/hotels.component';
+import { CategoryComponent } from './Components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HotelsComponent } from './Components/hotels/hotels.component';
     AboutusComponent,
     FooterComponent,
     HotelsComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

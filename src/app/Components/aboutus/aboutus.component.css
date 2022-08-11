@@ -48,39 +48,6 @@
     left: 0;
     
 }
-/* .about-us .about-right-side .about-img:after, .about-us .about-right-side .about-img:before {
-    content: "";
-    background: #2d3e52;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: rgb(45, 62, 82);
-    display: block;
-    height: calc(50% - 40px);
-    position: absolute;
-    width: 50%;
-} */
-/* .about-us .about-right-side .about-img:after, .about-us .about-right-side .about-img:before {
-    content: "";
-    background: #2d3e52;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-   
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: rgb(45, 62, 82);
-    display: block;
-    height: calc(50% - 40px);
-    position: absolute;
-    width: 50%;
-} */
 .image-fit {
     width: 30%;
     height: 30%;
@@ -118,12 +85,10 @@
 .text-custom-black {
     color: #000;
 }
-h3 {
-    font-size: 28px;
-}
+
 h3 {
     display: block;
-    font-size: 5em;
+    font-size: 2.5rem;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -187,4 +152,21 @@ ul.custom, ul.custom-flex {
     width: 24px;
     overflow: hidden;
     color:  #00a3c8;
+}
+.section-heading h3:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #01b7f2;
+    margin-top: 20px;
+}
+ .section-heading h3:before {
+    content: "\f072";
+    font-family: Font Awesome\ 5 Pro;
+    font-weight: 900;
+    color: #01b7f2;
+    font-size: 16px;
+    position: absolute;
+    bottom: -8.5px;
 }

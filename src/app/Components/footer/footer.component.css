@@ -34,7 +34,7 @@
 
 .col-md-6 {
     flex: 0 0 50%;
-    max-width: 50%;
+    max-width: 25%;
 }
 h4 {
     display: block;
@@ -68,9 +68,50 @@ ul.custom, ul.custom-flex {
     padding: 0;
 }
 ul{
+    list-style: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+}
+.footer .footer-box .links li:before {
+    background: #fff;
+    height: 2px;
+    content: "";
+    width: 10px;
+    display: inline-block;
+    margin-top: 0;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.footer .footer-box h4:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #fff;
+    margin-top: 20px;
+}
+.footer .footer-box .instagram {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.footer .footer-box .instagram {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 500px;
+}
+ul.custom, ul.custom-flex {
+    list-style: none;
+    padding: 0;
+}
+ul li a img{
+    display: flex;
+    width: 100px;
+    height: 100px;
 }
