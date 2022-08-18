@@ -1,0 +1,79 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "title": "Delhi to Banglore",
+      "image": "https://themes.codezion.com/angular/toor/assets/images/flights/1.jpg",
+      "AIRLINE": "MAJOR AIRLINES",
+      "FLIGHT TYPE": "BUSINESS",
+      "FARE TYPE": "REFUNDABLE",
+      "CANCELLATION": "$78/PERSON",
+      "FLIGHT CHANGE": "$53/PERSON",
+      "SEATS & BAGGAGE": "EXTRA CHARGE",
+      "BASE FARE": "$620.00",
+      "TAX & FEES": "$300.00",
+      "cost": "$920",
+      "way": "oneway flights"
+    },
+    {
+      "id": 2,
+      "title": "London to Banglore",
+      "image": "https://themes.codezion.com/angular/toor/assets/images/flights/3.jpg",
+      "AIRLINE": "ALITALIA",
+      "FLIGHT TYPE": "ECONOMY",
+      "FARE TYPE": "REFUNDABLE",
+      "CANCELLATION": "$78/PERSON",
+      "FLIGHT CHANGE": "$53/PERSON",
+      "SEATS & BAGGAGE": "EXTRA CHARGE",
+      "BASE FARE": "$420.00",
+      "TAX & FEES": "$300.00",
+      "cost": "$720",
+      "way": "oneway flights"
+    },
+    {
+      "id": 3,
+      "title": " London to Paris",
+      "image": "https://themes.codezion.com/angular/toor/assets/images/flights/1.jpg",
+      "AIRLINE": "US AIRWAYS",
+      "FLIGHT TYPE": "PREMIUM ECONOMY",
+      "FARE TYPE": "REFUNDABLE",
+      "CANCELLATION": "$78/PERSON",
+      "FLIGHT CHANGE": "$53/PERSON",
+      "SEATS & BAGGAGE": "EXTRA CHARGE",
+      "BASE FARE": "$600.00",
+      "TAX & FEES": "$300.00",
+      "cost": "$990",
+      "way": "oneway flights"
+    },
+    {
+      "id": 4,
+      "title": "Bengaluru to Paris",
+      "image": "https://themes.codezion.com/angular/toor/assets/images/flights/2.jpg",
+      "AIRLINE": "UNITED AIRLINES",
+      "FLIGHT TYPE": "FIRST CLASS",
+      "FARE TYPE": "REFUNDABLE",
+      "CANCELLATION": "$78/PERSON",
+      "FLIGHT CHANGE": "$53/PERSON",
+      "SEATS & BAGGAGE": "EXTRA CHARGE",
+      "BASE FARE": "$500.00",
+      "TAX & FEES": "$300.00",
+      "cost": "$800",
+      "way": "Return flights"
+    },
+    {
+      "id": 5,
+      "title": "Bengaluru to Paris",
+      "image": "https://themes.codezion.com/angular/toor/assets/images/flights/2.jpg",
+      "AIRLINE": "AIR FRANCE",
+      "FLIGHT TYPE": "BUSINESS",
+      "FARE TYPE": "REFUNDABLE",
+      "CANCELLATION": "$78/PERSON",
+      "FLIGHT CHANGE": "$53/PERSON",
+      "SEATS & BAGGAGE": "EXTRA CHARGE",
+      "BASE FARE": "$600.00",
+      "TAX & FEES": "$300.00",
+      "cost": "$900",
+      "way": "Oneway flights"
+    }
+  ]
+}

@@ -41,4 +41,7 @@ export class DataserviceService {
       }
     );
   }
+  getFlights() {
+    return this.http.get('http://localhost:3000/flights');
+  }
 }

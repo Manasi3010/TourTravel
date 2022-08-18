@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recom-hotels.component.css'],
 })
 export class SearchComponent implements OnInit {
+  Hotel: any;
+  HotelDetails: any;
   cruiseLine = [
     { name: 'Azamara Club' },
     { name: 'Carnival Cruise' },
@@ -17,7 +20,20 @@ export class SearchComponent implements OnInit {
     { name: 'Disney Crusie Line' },
     { name: 'Holland America Line' },
   ];
-  constructor() {}
+  constructor(private fb: FormBuilder) {
+    this.HotelDetails = this.fb.group({
+      Destination: new FormControl(),
+      chcekin: new FormControl(),
+      chcekout: new FormControl(),
+      rooms: new FormControl(),
+      adults: new FormControl(),
+      kids: new FormControl(),
+    });
+  }
 
   ngOnInit(): void {}
+
+  submitHotel() {
+    console.log(this.HotelDetails.getRawValue());
+  }
 }

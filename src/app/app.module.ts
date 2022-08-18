@@ -17,6 +17,8 @@ import { AboutusComponent } from './Components/aboutus/aboutus.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HotelsComponent } from './Components/hotels/hotels.component';
 import { CategoryComponent } from './Components/category/category.component';
+import { TeamComponent } from './Components/team/team.component';
+import { FlightsComponent } from './Components/flights/flights.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { CategoryComponent } from './Components/category/category.component';
     FooterComponent,
     HotelsComponent,
     CategoryComponent,
+    TeamComponent,
+    FlightsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { CategoryComponent } from './Components/category/category.component';
     NgImageSliderModule,
     FormsModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

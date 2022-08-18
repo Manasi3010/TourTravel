@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
   }
 
   opendailog() {
-    console.log('mat dialog');
     this.DialogRef = this.dialog.open(LoginComponent);
   }
 }

@@ -3,10 +3,14 @@
     <div class="col-12">
       <mat-tab-group>
         <mat-tab label="Hotel">
-          <div class="tab-containt">
-            <div class="tab-pane fade active show">
-              <div class="tab-inner">
-                <form>
+          <form
+            [formGroup]="HotelDetails"
+            (ngSubmit)="submitHotel()"
+            novalidate
+          >
+            <div class="tab-containt">
+              <div class="tab-pane fade active show">
+                <div class="tab-inner">
                   <div class="row">
                     <div class="col-lg-3 col-md-6">
                       <div class="form-group">
@@ -15,6 +19,7 @@
                           matInput
                           class="form-control form-control-custom"
                           type="text"
+                          formControlName="Destination"
                           placeholder="Enter Your Destination or Hotel Name"
                         />
                       </div>
@@ -26,18 +31,14 @@
                             <mat-label class="label">Check In</mat-label>
                             <div class="input-group group-form">
                               <input
-                                type="text"
-                                placeholder="mm/dd/yy"
-                                class="form-control-1 form-control-custom"
-                                [matDatepicker]="picker"
+                                matInput
+                                [matDatepicker]="picker2"
+                                formControlName="chcekin"
+                                class="form-control form-control-custom"
                               />
-                              <span class="input-group-append">
-                                <mat-datepicker-toggle
-                                  matSuffix
-                                  [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                              </span>
+                              <mat-datepicker-toggle matSuffix [for]="picker2">
+                              </mat-datepicker-toggle>
+                              <mat-datepicker #picker2></mat-datepicker>
                             </div>
                           </div>
                         </div>
@@ -46,18 +47,14 @@
                             <mat-label class="label">Check Out</mat-label>
                             <div class="input-group group-form">
                               <input
-                                type="text"
-                                placeholder="mm/dd/yy"
-                                class="form-control-1 form-control-custom"
-                                [matDatepicker]="picker"
+                                matInput
+                                class="form-control form-control-custom"
+                                [matDatepicker]="picker1"
+                                formControlName="chcekout"
                               />
-                              <span class="input-group-append">
-                                <mat-datepicker-toggle
-                                  matSuffix
-                                  [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                              </span>
+                              <mat-datepicker-toggle matSuffix [for]="picker1">
+                              </mat-datepicker-toggle>
+                              <mat-datepicker #picker1></mat-datepicker>
                             </div>
                           </div>
                         </div>
@@ -70,6 +67,7 @@
                             <mat-label class="label">Rooms</mat-label>
                             <div class="group-form">
                               <mat-select
+                                formControlName="rooms"
                                 class="custom-select form-control form-control-custom"
                               >
                                 <mat-option value="01">01</mat-option>
@@ -84,6 +82,7 @@
                             <mat-label class="label">Adults </mat-label>
                             <div class="group-form">
                               <mat-select
+                                formControlName="adults"
                                 class="custom-select form-control form-control-custom"
                               >
                                 <mat-option value="01">01</mat-option>
@@ -97,6 +96,7 @@
                             <mat-label class="label">Kids</mat-label>
                             <div class="group-form">
                               <mat-select
+                                formControlName="kids"
                                 class="custom-select form-control form-control-custom"
                               >
                                 <mat-option value="01">01</mat-option>
@@ -110,16 +110,17 @@
                     <div class="col-lg-2 col-md-6">
                       <mat-label class="submit"></mat-label>
                       <button
+                        type="submit"
                         class="btn-first btn-submit full-width btn-height"
                       >
                         Search Now
                       </button>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
         </mat-tab>
         <mat-tab label="Flights">
           <div class="tab-containt">
@@ -155,18 +156,13 @@
                             <mat-label class="label">Departing On</mat-label>
                             <div class="input-group group-form">
                               <input
-                                type="text"
-                                placeholder="mm/dd/yy"
-                                class="form-control-1 form-control-custom"
-                                [matDatepicker]="picker"
+                                matInput
+                                [matDatepicker]="picker6"
+                                class="form-control form-control-custom"
                               />
-                              <span class="input-group-append">
-                                <mat-datepicker-toggle
-                                  matSuffix
-                                  [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                              </span>
+                              <mat-datepicker-toggle matSuffix [for]="picker6">
+                              </mat-datepicker-toggle>
+                              <mat-datepicker #picker6></mat-datepicker>
                             </div>
                           </div>
                         </div>
@@ -192,18 +188,13 @@
                             <mat-label class="label">Arriving On</mat-label>
                             <div class="input-group group-form">
                               <input
-                                type="text"
-                                placeholder="mm/dd/yy"
-                                class="form-control-1 form-control-custom"
-                                [matDatepicker]="picker"
+                                matInput
+                                [matDatepicker]="picker7"
+                                class="form-control form-control-custom"
                               />
-                              <span class="input-group-append">
-                                <mat-datepicker-toggle
-                                  matSuffix
-                                  [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                              </span>
+                              <mat-datepicker-toggle matSuffix [for]="picker7">
+                              </mat-datepicker-toggle>
+                              <mat-datepicker #picker7></mat-datepicker>
                             </div>
                           </div>
                         </div>
@@ -315,18 +306,13 @@
                       <mat-label class="label">Departing Date</mat-label>
                       <div class="input-group group-form">
                         <input
-                          type="text"
-                          placeholder="mm/dd/yy"
-                          class="form-control-1 form-control-custom"
-                          [matDatepicker]="picker"
+                          matInput
+                          [matDatepicker]="picker3"
+                          class="form-control form-control-custom"
                         />
-                        <span class="input-group-append">
-                          <mat-datepicker-toggle
-                            matSuffix
-                            [for]="picker"
-                          ></mat-datepicker-toggle>
-                          <mat-datepicker #picker></mat-datepicker>
-                        </span>
+                        <mat-datepicker-toggle matSuffix [for]="picker3">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
                       </div>
                     </div>
                   </div>
@@ -414,18 +400,13 @@
                             >
                             <div class="input-group group-form">
                               <input
-                                type="text"
-                                placeholder="mm/dd/yy"
-                                class="form-control-1 form-control-custom"
-                                [matDatepicker]="picker"
+                                matInput
+                                [matDatepicker]="picker4"
+                                class="form-control form-control-custom"
                               />
-                              <span class="input-group-append">
-                                <mat-datepicker-toggle
-                                  matSuffix
-                                  [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                              </span>
+                              <mat-datepicker-toggle matSuffix [for]="picker4">
+                              </mat-datepicker-toggle>
+                              <mat-datepicker #picker4></mat-datepicker>
                             </div>
                           </div>
                         </div>
@@ -453,17 +434,14 @@
                             >
                             <div class="input-group group-form">
                               <input
-                                type="text"
-                                placeholder="mm/dd/yy"
-                                class="form-control-1 form-control-custom"
-                                [matDatepicker]="picker"
+                                matInput
+                                [matDatepicker]="picker5"
+                                class="form-control form-control-custom"
                               />
-                              <span class="input-group-append">
-                                <mat-datepicker-toggle
-                                  matSuffix
-                                  [for]="picker"
-                                ></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
+                              <mat-datepicker-toggle matSuffix [for]="picker5">
+                              </mat-datepicker-toggle>
+                              <span>
+                                <mat-datepicker #picker5></mat-datepicker>
                               </span>
                             </div>
                           </div>
